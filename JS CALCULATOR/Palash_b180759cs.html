@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <script>
+        function calculate() {
+            if (document.f.operand[0].checked) alert("Ans is : " + (parseInt(op1.value) + parseInt(op2.value)));
+            if (document.f.operand[1].checked) alert("Ans is : " + (parseInt(op1.value) - parseInt(op2.value)));
+            if (document.f.operand[2].checked) alert("Ans is : " + (parseInt(op1.value) * parseInt(op2.value)));
+        }
+    </script>
+</head>
+
+<body>
+    <h1> CALCULATOR </h1>
+    <form name="f" method="POST" action="">
+        <label for="v1">Operand 1</label>
+        <input type="text" name="op1" id="op1"></input>
+        <br> <br>
+        <label for="v2">Operand 2</label>
+        <input type="text" name="op2" id="op2"></input>
+        <br><br>
+
+        <input type="radio" name="operand" value="1"></input>
+        <label for="1">Add</label>
+        <br>
+        <input type="radio" name="operand" value="2"></input>
+        <label for="2">Subtract</label>
+        <br>
+        <input type="radio" name="operand" value="3"></input>
+        <label for="3">Multiply</label>
+        <br>
+        <input type="submit" onclick="calculate(operand, op1, op2)" value="Calculate"></input>
+    </form>
+</body>
+
+</html>
