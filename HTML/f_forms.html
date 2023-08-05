@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <p>Forms are used to take input from the user. The input can be of various types like text, password, radio button, checkbox, etc. The &lt;form&gt; tag is used to create a form. <br/>The &lt;input&gt; tag is used to create the input fields. The <em>type</em> attribute is used to specify the type of input field. The <em>value</em> attribute is used to specify the default value of the input field. The <em>name</em> attribute is used to specify the name of the input field. The <em>id</em> attribute is used to specify the id of the input field. The <em>label</em> tag
+    
+    <form style="background-color:rgb(251, 244, 236); width:30%;padding:15px">
+        <fieldset>
+        <legend>Personal Data</legend>
+        Enter your name <input type="text" placeholder="Full name" name="name" id="name"><br/><br/>
+        Enter your age <input type = "number" value="Enter your age" name="age" id="age" min = "1" max = "100"><br/><br/>
+        Enter your DOB <input type = "date" value="Enter your DOB" name="dob" id="dob"><br/><br/>
+        Choose your favorite color <input type = "color" value="Enter your favorite color" name="color" id="color"><br/><br/>
+        <textarea name="address" rows="6" cols="30">Enter your address here...
+        </textarea><br/><br/>
+        <input type="button" onclick="alert('Thanks for filling your personal data')" value="Click Me!"><br/><br/>
+        </fieldset>
+        <fieldset>
+        <legend>Education</legend>
+        Are you a student ?<input type = "checkbox" id = "choice" ><br/><br/>
+         
+        <label for="Ed">Choose your qualification:</label>
+        <select id="Ed" name="qualification">
+        <option value="Doctoral">Doctoral</option>
+        <option value="Masters">Masters</option>
+        <option value="Bachelors" selected>Bachelors</option>
+        <option value="High School">High School</option>
+        </select><br/><br/>
+        </fieldset>
+        <fieldset>
+        <legend>Your choice matters! </legend>
+        <p>Choose your favorite Web language:</p>
+
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <br/><br/>
+        </fieldset>
+        <div style="display:flex">
+        <input type="submit" value="Submit" style="padding:5px 10px;margin:5px auto;background-color:#73a8f9;border-radius:25px;border-color:blue">
+        </div>
+
+    </form>
+    <br/><br/>
+    <h3>Notes: </h3>
+    <ul>
+        <li>Notice that each input field must have a name attribute to be submitted.
+            If the name attribute is omitted, the value of the input field will not be sent at all.</li>
+        <li>The action attribute defines the action to be performed when the form is submitted.
+            Usually, the form data is sent to a file on the server when the user clicks on the submit button.</li>
+        <li>The method attribute specifies the HTTP method to be used when submitting the form data.
+            The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+            The default HTTP method when submitting form data is GET. </li>
+    </ul>
+
+</body>
+</html>
