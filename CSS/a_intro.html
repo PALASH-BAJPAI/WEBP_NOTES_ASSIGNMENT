@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ways to add CSS</title>
+    <link rel="stylesheet" href="b_style.css">
+    <style>
+        /* Internal CSS */
+        .internal{
+            color: rgb(5, 184, 112);
+            font-weight: bold;
+        }
+        /*Id Selector*/
+        #child{
+            color: rgb(255, 0, 93);
+            font-weight: lighter;
+        }
+    </style>
+
+</head>
+<body>
+<!-- What is CSS?
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files -->
+
+<h2>Ways to add CSS</h2>
+<ul>
+    <li style="color:tomato;font-weight:bold">Inline styles:<span style="color:rgb(113, 5, 254);font-weight:lighter"> designed via inline style</span></li>
+    <li class="internal">Internal CSS: <span id="child">designed via interal css</span></li>
+    <li class="external">External CSS: <span class="external">Added via external css</span></li>
+</ul>
+<br/>
+<hr/>
+
+<div class="box">
+<!--Text shadow: horizontal vertical blur color;-->
+<h2 style="text-shadow:2px 2px 5px yellow;">Selectors</h2>
+<ol>
+    <li class="selector">Element selector</li>
+    <p class="content">Selects based on element name.</p>
+    <li class="selector">Class selector</li>
+    <p class="content">Selects based on class name, referenced as .class. Classes of certain elements can be referenced by element.class.</p>
+    <li class="selector">ID selector</li>
+    <p class="content">The id of an element is unique within a page, so the id selector is used to select one unique element and is referenced as a #id.</p>
+    <li class="selector">Universal selector</li>
+    <p class="content">Selects all elements</p>
+    <li class="selector">Grouping selector</li>
+    <p class="content">Selects all the elements with the same style definitions, separating each selector by a comma. </p>
+</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        .container {
+            background-color:rgba(255, 199, 177, 0.686);
+            padding: 10px;
+        }
+        .item{
+            border:4px solid black;
+            padding:10px;
+            background-color: rgb(173, 230, 193);
+        }
+        /*Can not set width height for inline element*/
+        .item-1{
+            width:2000px;
+        }
+        .item-3{
+            display: inline-block;
+            max-width:700px;
+            max-height: 40px;
+        }
+
+        /*FLEX*/
+        .flex-container{
+            display: flex;
+            align-items: center;  /*align vertically(cross-axis)*/
+            justify-content: space-around;  /*align horizontally(main-axis)*/
+            background-color:rgba(255, 241, 177, 0.686);
+            padding: 10px;
+            height: 100px
+        }
+        .flex-item{
+            border:4px solid red;
+            padding:10px;
+            background-color: rgb(217, 178, 233);
+            height:70%;
+            max-width: 30%;
+        }
+        .flex-item-1{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Display</h1>
+        <div>Default for div is block</div>
+        <span class="item item-1">Span: For span default display is inline</span>
+        <span class="item item-2">Span: We can not change width and height of span element</span>
+        <span class="item item-3">Span: If we want to set height and width of span element, make it inline-block</span>
+    </div>
+
+    <br/><hr/><br/>
+
+    <h1>Flex</h1>
+    The flex layout allows responsive elements within a container to be automatically arranged depending on viewport size. Display:flex
+    <div class="flex-container">
+        <span class="flex-item flex-item-1">Default flex-direction is row, but can change it to column</span>
+        <span class="flex-item flex-item-2">justify-content: align in main axis(default horizontal), align-item: align in cross-axis</span>
+        <span class="flex-item flex-item-3">The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary</span>
+    </div>
+    
+    <br/><hr/><br/>
+
+    <h1>Grid</h1>
+    The flex layout allows responsive elements within a container to be automatically arranged depending on viewport size. Display:flex
+    <div class="flex-container">
+        <span class="flex-item flex-item-1">Default flex-direction is row, but can change it to column</span>
+        <span class="flex-item flex-item-2">justify-content: align in main axis(default horizontal), align-item: align in cross-axis</span>
+        <span class="flex-item flex-item-3">Span: If we want to set height and width of span element, make it inline-block</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+        .centering{
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid green;
+            text-align: center;
+        }
+          
+        .centeredp {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        img.left{
+            float: left;
+        }
+        img.right{
+            float: right;
+        }
+        img.none{
+            float: none;
+        }
+        div{
+            float: left;
+        }
+        .div1 {
+            background: red;
+        }
+          
+        .div2 {
+            background: yellow;
+        }
+          
+        .div3 {
+            background: green;
+        }
+        .clear{
+            clear: both;
+        }
+        div.border{
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+        .img1 {
+            float: right;
+        }
+          
+        .img2 {
+            float: right;
+        }
+        img.img3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+          
+        .clearfix {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+            overflow: auto;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+    </style>
+</head>
+<body style="background-color: bisque">
+    <div>
+        <h2>Float Property</h2>
+        <p style="font-weight:500">Used for positioning and formatting content. Majorly used to wrap text/content around images. The values are: </p>
+        <ul>
+            <li>left</li>
+            <br/>
+            <img class="left" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt = "Female Tiger" width ="150px" height="100px"> 
+            <p> The tiger (Panthera tigris) is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar. 
+            It is territorial and generally a solitary but social predator, requiring large contiguous areas of habitat to support its requirements for prey and rearing of its offspring. 
+            Tiger cubs stay with their mother for about two years and then become independent, leaving their mother's home range to establish their own.</p>
+            <br/>
+            <li>right</li>
+            <img class="right" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt = "Female Tiger" width ="150px" height="100px"> 
+            <p> The tiger (Panthera tigris) is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar. 
+            It is territorial and generally a solitary but social predator, requiring large contiguous areas of habitat to support its requirements for prey and rearing of its offspring. 
+            Tiger cubs stay with their mother for about two years and then become independent, leaving their mother's home range to establish their own.</p>
+            <br/>
+            <li>none</li>
+                <p>Default value</p>
+                <img class="none" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt = "Female Tiger" width ="150px" height="100px"> 
+            <p> The tiger (Panthera tigris) is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar. 
+            It is territorial and generally a solitary but social predator, requiring large contiguous areas of habitat to support its requirements for prey and rearing of its offspring. 
+            Tiger cubs stay with their mother for about two years and then become independent, leaving their mother's home range to establish their own.</p>
+            <br/>
+            <li>inherit</li>
+        </ul>
+    </div>
+    <p style ="font-weight: 600;">The div elements are usually placed on top of each other. By assigning left to float, it can be seen next to each other. </p>
+        <div class="div1">Div 1</div>
+        <div class="div2">Div 2</div>
+        <div class="div3">Div 3</div>
+    <div class = "clear">
+        <h2>Clear and Clearfix</h2>
+        <p>The clear property specifies what should happen with the element that is next to a floating element. The clear property can have one of the following values: </p>
+        <ul>
+            <li>none</li>
+            <li>left</li>
+            <li>right</li>
+            <li>both</li>
+            <li>inherit</li>
+        </ul>
+        <p>When clearing floats, the value of the clear to the float.</p>
+        <p>The clearfix property solves the overflow of a taller element in the smaller container element. 
+        <br/>The overflow: auto clearfix works well as long as you are able to keep control of your margins and padding (else you might see scrollbars)</p>
+        <div class="border">
+            <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt="Tiger" width="170" height="170">
+            <p> The tiger (Panthera tigris) is the largest living cat.</p>
+        </div>
+        <h2 style = "clear:right"></h2>
+        <div class ="clearfix">
+            <img class="img2" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt="Tiger" width="170" height="170">
+            <p> The tiger (Panthera tigris) is the largest living cat.</p>
+        </div>
+        <h2 style = "clear:right"></h2>
+        <div class ="clearfix">
+            <img class="img2" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt="Tiger" width="170" height="170">
+            <p> The tiger (Panthera tigris) is the largest living cat.</p>
+        </div>
+    </div>
+
+    <div style="clear:both;padding:20px;background-color:#73AD21;width:100%"></div>
+
+    <div style=>
+        <h2>Align Property</h2>
+        <h3>Center Align Elements using margin:auto and text align using text-align:center</h3>
+       
+        <div class = "center" style ="width: 60%; margin:auto; border: 3px solid #73AD21;padding: 10px;">
+            <p style = "text-align:center">Centered Block</p>
+        </div>
+        
+        <img class ="img3"src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Walking_tiger_female.jpg" alt="Tiger" style="width:40%">
+        <div class = "centering" style = "clear:both">Both centered using line-height.</div>
+    </div>    
+</body>
+</html>

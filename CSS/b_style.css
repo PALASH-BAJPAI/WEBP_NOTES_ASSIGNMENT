@@ -1,0 +1,40 @@
+/* Global Selector */
+*{
+    margin:3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Element Selector */
+body {
+    background-color:rgb(254, 253, 248);
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+  }
+  li {
+    color: rgb(123, 0, 255);
+    font-weight: bold;
+  }
+/* Element.class selector  */
+  span.external{
+    color:brown;
+    font-weight: lighter;
+  }
+  .content {
+    font-family: 'Times New Roman', Times, serif;
+  }
+/* Class selector */
+  .selector{
+    color:crimson;
+  }
+  .box{
+    width:50%;
+    margin:10px auto;
+    border:5px groove orange;
+    padding:10px;
+  }
+  .box>h2{
+    color:rgb(0, 0, 0);
+    text-align:center;
+  }

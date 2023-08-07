@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning and Overflow</title>
+    <style>
+        p.static{
+            position: static;
+            border: 3px solid red;
+        }
+        p.relative{
+            position: relative;
+            border: 3px solid red;
+            top: 20px;
+            left: 30px;
+        }
+        p.fixed{
+            position: fixed;
+            border: 3px solid darkgreen;
+            background-color:lightgreen;
+            bottom: 0px;
+            right: 0px;
+        }
+        p.absolute{
+            position: absolute;
+            border: 3px solid darkgreen;
+            background-color:lightgreen;
+            bottom: 280px;
+            right: 100px;
+        }
+        h4.sticky{
+            position: sticky;
+            border: 3px solid darkgreen;
+            background-color:lightgreen;
+            top: 0px;
+        }
+        .boxes{
+            position: relative;
+          }
+          
+        .Black{
+            position: relative;
+            z-index: 1;
+            border: 2px solid black;
+            height: 100px;
+            margin: 30px;
+            background: lightslategrey;
+        }
+          
+        .Red{
+            position: absolute;
+            z-index: 3;
+            background: lightcoral;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+          
+        .Green{
+            position: absolute;
+            z-index: 2;
+            background: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+        .container {
+            position: relative;
+          }
+          
+        .black-box {
+            position: relative;
+            background:lightslategray;
+            border: 2px solid black;
+            height: 100px;
+            margin: 30px;
+        }
+          
+        .gray-box {
+            position: absolute;
+            background: lightgray;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+          
+        .green-box {
+            position: absolute;
+            background: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+        div.visible{
+            background-color: lightsteelblue;
+            width: 200px;
+            height: 65px;
+            border: 1px solid;
+            overflow: visible;
+        }
+        div.hidden{
+            background-color: coral;
+            width: 200px;
+            height: 65px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        div.scroll{
+            background-color: coral;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+        div.auto{
+            background-color: coral;
+            width: 200px;
+            height: 65px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+        div.overflows {
+            background-color: coral;
+            width: 200px;
+            height: 65px;
+            border: 1px solid black;
+            overflow-x: hidden;
+            overflow-y: scroll;
+          }
+
+    </style>
+</head>
+<body style = "background-color: bisque;">
+    <div>
+        <h4 class = "sticky">Try to ignore me!!</h4>
+        <h2>Position Property</h2>
+        <p>The <strong><em>position</em></strong> property specifies the type of positioning method used for an element. 
+            Elements are positioned using top, bottom, left and right properties. But, these won't work if position property is not set and 
+            work differently depending on the position value. The five different position values are: </p>
+        <ul>
+            <li style ="font-weight: 700;">Static positioning</li>
+                <p class="static">This is the default value. Elements are not affected by the top, bottom, left, and right properties. 
+                    It is always positioned according to the normal flow of the page:</p>
+            <li style = "font-weight: 700;">Relative positioning</li>
+                <p class ="relative">Positioned relative to its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+            <li style ="font-weight: 700;">Fixed positioning</li>
+                <p>Positioned relative to the viewport. A fixed element does not leave a gap in the page where it would normally have been located. Check out the Happy Learning to get the feel!</p>
+                <p class="fixed">Happy Learning!</p>
+            <li style = "font-weight: 700;">Absolute positioning</li>
+                <p class ="relative">Positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport). Absolute positioned elements are removed from the normal flow, and can overlap elements. 
+                    <p class ="absolute">If it has no positioned ancestors, it uses the document body,</p> and moves along with page scrolling.</p>
+            <li style = "font-weight: 700;">Sticky positioning</li>
+                    <p>Positioned based on the user's scroll position. 
+                        A sticky element toggles between relative and fixed, depending on the scroll position. </p>       
+        </ul>
+    </div>
+    <div>
+    <div>
+        <h2>Z-index</h2>
+        <p>The <strong><em>z-index</em></strong> property specifies the stack order of an element. This works only on positioned elements.</p>
+        <p>An element can have a positive or negative stack order. 
+            An element with greater stack order is always in front of an element with a lower stack order.</p>
+    </div>
+    <p>Let's see an example where z-index is applied:</p>
+    <div class = "boxes">
+        
+        <div class = "Black">Black</div>
+        <div class = "Red">Red</div>
+        <div class = "Green">Green</div>
+    </div>
+    <p>Let's see another example where z-index is not applied:</p>
+    <div class="container">
+        <div class="black-box">Black</div>
+        <div class="gray-box">Gray</div>
+        <div class="green-box">Green</div>
+    </div>
+    <p>In this the elements are as if in the HTML code. The last one in the HTML code will be seen above all others.</p>
+    </div>
+    <div>
+        <h2>Overflow Property</h2>
+        <p>Controls what happens to content that is too big to fit into an area. Specifies whether to clip the content or to add scrollbars</p>
+        <p>The overflow property only works for block elements with a specified height. The overflow property has the following values: </p>
+        <ul>
+            <li style = "font-weight: 700;">Visible</li>
+            <div class="visible">By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box.</div>
+            <br/>
+            <li style = "font-weight: 700;">Hidden</li>
+            <div class="hidden">With the hidden value, the overflow is clipped, and the rest of the content is hidden in this property. </div>
+            <li style = "font-weight: 700;">Scroll</li>
+            <div class="scroll">Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. 
+                Note that this will add a scrollbar both horizontally and vertically (even if you do not need it).</div>
+            <li style = "font-weight: 700;">Auto</li>
+            <div class="auto">The auto value is similar to scroll, only it add scrollbars when necessary.</div>
+            <li style = "font-weight: 700;">Overflow-x and Overflow-y</li>
+            <div class="overflows">You can also change the overflow of content horizontally or vertically. 
+                overflow-x specifies what to do with the left/right edges of the content. 
+                overflow-y specifies what to do with the top/bottom edges of the content.
+                </div>
+        </ul>
+    </div>
+</body>
+</html>

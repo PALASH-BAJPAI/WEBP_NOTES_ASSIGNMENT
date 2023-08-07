@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: DodgerBlue;
+        }
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body style="background-color:antiquewhite">
+    <div>
+        <h2>Flex Container</h2>
+        <p>The flex container becomes flexible by setting the display property to flex. The flex container is 
+        considered to be the parent element of all flex elements inside.<br/>
+        Here is an example of a flex container.</p>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p>Here 1,2 and 3 are direct child items of the flex-containers, thus are flexible. </p>
+        <p>The flex container properties are: </p>
+        <ul>
+            <li style="font-weight: 600">flex-direction</li>
+                <p>Defines in which direction the container wants to stack the flex items. The values are: </p>
+                <ul>
+                    <li style="font-style: oblique;font-weight:bold">row</li>
+                        <p>left-to-right arrangement</p>
+                    <li style="font-style: oblique;font-weight:bold">row-reverse</li>
+                        <p>right-to-left arrangement</p>
+                    <li style="font-style: oblique;font-weight:bold">column</li>
+                        <p>top-to-bottom arrangement</p>
+                    <li style="font-style: oblique;font-weight:bold">column-reverse</li>
+                        <p>bottom-to-top arrangement</p>
+                </ul>
+            <li style="font-weight: 600">flex-wrap</li>
+                <p>Specifies whether the flex items should wrap or not. The values are: </p>
+                <ul>
+                    <li style="font-style: oblique;font-weight:bold">nowrap</li>
+                        <p>all flex items will be on one line. This is the default</p>
+                    <li style="font-style: oblique;font-weight:bold">wrap</li>
+                        <p>flex items will wrap onto multiple lines, from top to bottom</p>
+                    <li style="font-style: oblique;font-weight:bold">wrap-reverse</li>
+                        <p>flex items will wrap onto multiple lines, but in reverse order</p>
+                </ul>
+            <li style="font-weight: 600">flex-flow</li>
+                <p>A shorthand property for the flex-direction and the flex-wrap properties. The default value is row nowrap.</p>
+            <li style="font-weight: 600">justify-content</li>
+                <p>Used to align the flex items. The values are: </p>
+                <ul>
+                    <li style="font-style: oblique;font-weight:bold">flex-start</li>
+                        <p>items are positioned at the beginning of the container. This is the default</p>
+                    <li style="font-style: oblique;font-weight:bold">flex-end</li>
+                        <p>items are positioned at the end of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">center</li>
+                        <p>items are positioned at the center of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">space-between</li>
+                        <p>items are positioned with space between the lines</p>
+                    <li style="font-style: oblique;font-weight:bold">space-around</li>
+                        <p>items are positioned with space before, between, and after the lines</p>
+                </ul>
+            <li style="font-weight: 600">align-items</li>
+                <p>used to align the flex items. </p>
+                <ul>
+                    <li style="font-style: oblique;font-weight:bold">stretch</li>
+                        <p>stretch to fill the container (this is default)</p>
+                    <li style="font-style: oblique;font-weight:bold">flex-start</li>
+                        <p>items are positioned at the beginning of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">flex-end</li>
+                        <p>items are positioned at the end of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">center</li>
+                        <p>items are positioned at the center of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">baseline</li>
+                        <p>items are positioned at the baseline of the container</p>
+                </ul>
+            <li style="font-weight: 600">align-content</li>  
+                <p>Used to align the flex lines.</p>
+                <ul>
+                    <li style="font-style: oblique;font-weight:bold">stretch</li>
+                        <p>lines stretch to take up the remaining space (this is default)</p>
+                    <li style="font-style: oblique;font-weight:bold">flex-start</li>
+                        <p>lines are packed at the top of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">flex-end</li>
+                        <p>lines are packed at the bottom of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">center</li>
+                        <p>lines are packed at the center of the container</p>
+                    <li style="font-style: oblique;font-weight:bold">space-between</li>
+                        <p>lines display with equal space between them</p>
+                    <li style="font-style: oblique;font-weight:bold">space-around</li>
+                        <p>lines display with equal space around them</p>
+                </ul>            
+        </ul>
+        <h2>Perfect Centering</h2>
+        <p>Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered.</p>
+        <div style ="display: flex; justify-content: center; align-items: center; height: 300px;width:50%; background-color: DodgerBlue;">
+            <div style = "background-color: #f1f1f1; color: white; width: 100px; height: 100px;"></div>
+        </div>
+        <h2>Flex Items</h2>
+        <p>Flex items are the children of a flex container. Flex items can be laid out in any direction and in any order. <br/>
+        Flex items can also "flex" their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. </p>
+        <p>The flex item properties are: </p>
+        <ul>
+            <li style="font-weight: 600">order</li>
+                <p>Specifies the order of the flex items. The default value is 0, so the first item will be first in the display.</p>
+            <li style="font-weight: 600">flex-grow</li>
+                <p>Specifies how much the item will grow relative to the rest of the flexible items inside the same container. The default value is 0, so the item will not grow at all.</p>
+            <li style="font-weight: 600">flex-shrink</li>
+                <p>Specifies how the item will shrink relative to the rest of the flexible items inside the same container. The default value is 1, so the item will shrink equally to its peers.</p>
+            <li style="font-weight: 600">flex-basis</li>
+                <p>Specifies the initial length of a flexible item. The default value is auto, which sizes the item based on its content.</p>
+            <li style="font-weight: 600">flex</li>
+                <p>A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties.</p>
+            <li style="font-weight: 600">align-self</li>
+                <p>Specifies the alignment for the selected item inside the flexible container. The default value is auto, which will use the default alignment set by the container.
+                     This property overrides the container's align-items property.</p>
+            
+        </ul>
+    </div>
+</body>
+</html>
