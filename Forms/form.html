@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Help us improve by your valuable suggestions!</p>
+        </header>
+        <form id="survey-form">
+
+            <fieldset>
+                <label id="name-label" for="name">Enter your name: <input class="info" type="text" name="name" id="name"
+                        placeholder="Enter your name" required /></label>
+                <label id="email-label" for="email">Enter your email: <input class="info" type="email" name="email"
+                        id="email" placeholder="Enter your email" required /></label>
+                <label id="number-label" for="age">Enter your age: <input class="info" type="number" name="age"
+                        id="number" min="18" max="125" placeholder="Age" /></label>
+                <label id="dropdown-label" for="dropdown">What describes you the best?
+                    <select id="dropdown">
+                        <option disabled selected value="">--Select--</option>
+                        <option value="student">Student</option>
+                        <option value="work">Working Professional</option>
+                        <option value="make">Entrepreneur</option>
+                        <option value="home">Home-maker</option>
+                        <option value="other">Other</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <p>Which of the topics below are new to you?(Check all that apply)</p>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" value="AI" name="course">Artificial Intelligence</label>
+                    <label><input type="checkbox" value="ML" name="course">Machine Learning</label>
+                    <label><input type="checkbox" value="IoT" name="course">IoT</label>
+                    <label><input type="checkbox" value="VR" name="course">Virtual Reality</label>
+                    <label><input type="checkbox" value="3D" name="course">3D Printing</label>
+                    <label><input type="checkbox" value="DA" name="course">Data Analytics</label>
+                    <label><input type="checkbox" value="BD" name="course">Big Data</label><br />
+                </div>
+                <p style="text-align:left">We provide a variety of courses on these topics suitable for all.</p>
+            </fieldset>
+
+            <fieldset>
+                <p style="text-align:left;margin-left:10px">Would you like to take join our courses?</p>
+                <div class="radio-container">
+                    <label name="choice" for="choice"> Yes
+                    <input type="radio" name="choice" checked value="yes" />
+                    </label>
+                    <label name="choice" for="choice">No<input type="radio" name="choice" value="no" /></label>
+                    <label name="choice" for="choice">May be Later<input type="radio" name="choice"
+                            value="later" /></label>
+                </div>
+                <p>Please provide comments on how to modify our courses to best suit your requirements.</p>
+                <textarea class="suggest" id="suggestions" name="suggestions" placeholder="Enter your feedback..."
+                    rows="4" cols="40"></textarea>
+            </fieldset>
+
+            <div class="submit">
+                <input type="submit" id="submit" class=="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
